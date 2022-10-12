@@ -9,13 +9,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Setup Python Version
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
-          python-version: 3.8 # Install the python version needed
-      - name: Install Python dependencies
-        run: python -m pip install --upgrade pip requests
+          python-version: '3.10'
       - name: Execute Python Script # Run the run.py on the repository root directory
         run: |
           python alesp.py
